@@ -3,7 +3,7 @@
 set -e
 
 source_directory="$(cd "$(dirname "$0")" && pwd)"
-dotfiles="dot-xinitrc"
+dotfiles="dot-config dot-xinitrc"
 
 if [ ! -d "$HOME" ]; then
 	echo "Error: HOME directory does not exist."
