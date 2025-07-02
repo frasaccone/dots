@@ -3,7 +3,7 @@
 set -e
 
 source_directory="$(cd "$(dirname "$0")" && pwd)"
-dotfiles="dot-config dot-xinitrc"
+dotfiles="config xinitrc"
 
 if [ ! -d "$HOME" ]; then
 	echo "Error: HOME directory does not exist."
@@ -12,7 +12,7 @@ fi
 
 for file in $dotfiles; do
 	source_file="$source_directory/$file"
-	destination_file="$HOME/$(echo "$file" | sed 's/dot-/./g')"
+	destination_file="$HOME/.$file"
 
 	rm -rf "$destination_file"
 	cp -fR "$source_file" "$destination_file"
