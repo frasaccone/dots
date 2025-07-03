@@ -39,4 +39,6 @@ while true; do
 	sleep 1
 done &
 
-exec dwm
+exec dwm &
+
+mpv --wid=0 --loop=inf ~/.local/share/wallpaper.mp4
