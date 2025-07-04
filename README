@@ -2,3 +2,8 @@ Dots
 ====
 
 Francesco Saccone's dotfiles.
+
+Installation
+------------
+
+	$ ./install.sh
