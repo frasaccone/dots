@@ -56,6 +56,6 @@ while true; do
 	sleep 1
 done &
 
-exec dwm &
+feh --bg-fill ~/.local/share/wallpaper.png
 
-mpv --wid=0 --loop=inf ~/.local/share/wallpaper.mp4
+exec dwm
