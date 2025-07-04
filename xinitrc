@@ -4,10 +4,9 @@ xset -b
 setxkbmap -layout it -option ctrl:nocaps
 
 while true; do
-	wireless_interface=$(ip link show | grep -E '^[0-9]+: ' \
-	                                  | grep -i 'wl' | cut -d: -f2 \
-	                                  | tr -d ' ' | head -n 1 \
-	                                  | sed 's/:.*//;s/ //g' | grep '^w')
+	wireless_interface=$(wpa_cli interface | head -n 1 \
+	                                       | cut -d ' ' -f 3 \
+	                                       | tr -d "'")
 
 	if [ -n "$wireless_interface" ]; then
 		ssid=$(wpa_cli -i "$wireless_interface" status \

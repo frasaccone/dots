@@ -17,7 +17,6 @@ Requirements
 	- vis
 - .xinitrc
 	- feh
-	- iproute2
 	- wpa supplicant
 	- xcompmgr
 	- xserver
