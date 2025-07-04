@@ -4,6 +4,21 @@ xset -b
 setxkbmap -layout it -option ctrl:nocaps
 
 while true; do
+	wireless_interface=$(ip link show | grep -E '^[0-9]+: ' \
+	                                  | grep -i 'wl' | cut -d: -f2 \
+	                                  | tr -d ' ' | head -n 1 \
+	                                  | sed 's/:.*//;s/ //g' | grep '^w')
+
+	if [ -n "$wireless_interface" ]; then
+		ssid=$(wpa_cli -i "$wireless_interface" status \
+		                                        | grep '^ssid=' \
+		                                        | cut -d '=' -f 2)
+	fi
+
+	if [ -z "$ssid" ]; then
+		ssid="None"
+	fi
+
 	battery_device=$(ls /sys/class/power_supply | grep '^BAT' | head -n 1)
 	battery=$(cat "/sys/class/power_supply/$battery_device/capacity")%
 
@@ -30,6 +45,8 @@ while true; do
 	localzone=$(date +%Z)
 
 	status=$(echo \
+	         "📡 $ssid" \
+	         " " \
 	         "🔋 $battery $battery_status" \
 	         " " \
 	         "$localdate $localtime $localzone" \
