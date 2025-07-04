@@ -49,7 +49,7 @@ while true; do
 	         " " \
 	         "🔋 $battery $battery_status" \
 	         " " \
-	         "$localdate $localtime $localzone" \
+	         "📅 $localdate $localtime $localzone" \
 	         "")
 
 	xsetroot -name "$status"
