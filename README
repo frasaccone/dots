@@ -3,6 +3,25 @@ Dots
 
 Francesco Saccone's dotfiles.
 
+Requirements
+------------
+
+- .config/aerc
+	- aerc
+	- openssh
+	- rsync
+- .config/git
+	- git
+	- gnupg
+- .config/vis
+	- vis
+- .xinitrc
+	- feh
+	- iproute2
+	- wpa supplicant
+	- xcompmgr
+	- xserver
+
 Installation
 ------------
 
