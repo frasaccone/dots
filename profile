@@ -7,4 +7,3 @@ if [ $(tty) = "/dev/tty1" ]; then
 fi
 
 export EDITOR="vis"
-export GPG_TTY=$(tty)
