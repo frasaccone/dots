@@ -19,7 +19,9 @@ Requirements
 	- feh
 	- wpa supplicant
 	- xcompmgr
+	- xinput
 	- xserver
+	- xsetroot
 
 Installation
 ------------
