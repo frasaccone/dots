@@ -7,3 +7,5 @@ if [ $(tty) = "/dev/tty1" ]; then
 fi
 
 export EDITOR="vis"
+
+eval "$(ssh-agent)"
