@@ -8,4 +8,4 @@ fi
 
 export EDITOR="vis"
 
-eval "$(ssh-agent)"
+eval "$(ssh-agent)" > /dev/null
