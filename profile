@@ -1,6 +1,7 @@
 #!/bin/sh
 
-PS1="$USER@$(hostname):\$PWD $ "
+PS1=$(printf '\n\033[0;1m┌─[ \033[0;1;3m\u@\h\033[0;1m ]\n' \
+   && printf   '\033[0;1m└─( \033[0;1;3m\w\033[0;1m ) \$ \033[0m')
 
 if [ $(tty) = "/dev/tty1" ]; then
 	startx &> /dev/null
