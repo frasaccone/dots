@@ -8,5 +8,6 @@ if [ $(tty) = "/dev/tty1" ]; then
 fi
 
 export EDITOR="vis"
+export PGPFINGERPRINT="2BE025D27B449E55B320C44209F39C4E70CB2C24"
 
 eval "$(ssh-agent)" > /dev/null
