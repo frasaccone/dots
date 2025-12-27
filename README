@@ -24,9 +24,11 @@ Requirements
 		- [`vis`](https://github.com/martanne/vis)
 - `.xinitrc`
 	- [`feh`](https://feh.finalrewind.org/)
+	- [`setxkbmap`](https://x.org/wiki/)
 	- [`wpa_supplicant`](http://w1.fi/wpa_supplicant/)
 	- [`xcompmgr`](https://gitlab.freedesktop.org/xorg/app/xcompmgr/)
 	- [`xinput`](https://x.org/wiki/)
+	- [`xset`](https://x.org/wiki/)
 	- [`xsetroot`](https://x.org/wiki/)
 
 Installation
