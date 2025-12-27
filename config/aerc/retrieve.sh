@@ -10,7 +10,11 @@ user="$1"
 domain="francescosaccone.com"
 server="mail.francescosaccone.com"
 
-mkdir -p ~/mail/$user@$domain/{Archive,Drafts,Inbox,Sent}/{cur,new,tmp}
+for f in Archive Drafts Inbox Sent; do
+	for d in cur new tmp; do
+		mkdir -p ~/mail/$user@$domain/$f/$d
+	done
+done
 
 rsync -rz \
       --remove-source-files \
