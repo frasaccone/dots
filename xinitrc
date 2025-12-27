@@ -1,7 +1,7 @@
 #!/bin/sh
 
 xset -b
-setxkbmap -layout it -option ctrl:nocaps
+setxkbmap -layout us
 
 touchpad_id=$(xinput list \
               | grep -i touchpad \
