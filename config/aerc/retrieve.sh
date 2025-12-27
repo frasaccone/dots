@@ -19,5 +19,5 @@ done
 rsync -rz \
       --remove-source-files \
       --ignore-missing-args \
-      $user@$server \
+      $user@$server:~/* \
       ~/mail/$user@$domain/Inbox
