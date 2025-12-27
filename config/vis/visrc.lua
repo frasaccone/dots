@@ -4,7 +4,6 @@ function endsWith(str, suffix)
 	return str:sub(-#suffix) == suffix
 end
 
-
 vis.events.subscribe(vis.events.WIN_OPEN, function(win)
 	vis:command('set autoindent on')
 	vis:command('set colorcolumn 80')
