@@ -6,22 +6,22 @@ Dotfiles.
 Requirements
 ------------
 
-- .config/aerc
-	- aerc
-	- openssh
-	- rsync
-- .config/git
-	- git
-	- gnupg
-- .config/vis
-	- vis
-- .xinitrc
-	- feh
-	- wpa supplicant
-	- xcompmgr
-	- xinput
-	- xserver
-	- xsetroot
+- `.config/aerc`
+	- `aerc`
+	- `openssh`
+	- `rsync`
+- `.config/git`
+	- `git`
+	- `gnupg`
+- `.config/vis`
+	- `vis`
+- `.xinitrc`
+	- `feh`
+	- `wpa supplicant`
+	- `xcompmgr`
+	- `xinput`
+	- `xserver`
+	- `xsetroot`
 
 Installation
 ------------
