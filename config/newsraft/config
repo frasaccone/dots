@@ -1,0 +1,1 @@
+notification-command "printf '\e]9;Newsraft brought %q news!\a'"
