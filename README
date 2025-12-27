@@ -12,14 +12,13 @@ Requirements
 		- [`gnupg`](https://gnupg.org/)
 		- [`openssh`](https://www.openssh.org/)
 		- [`rsync`](https://rsync.samba.org/)
-- `.config/`
 	- `git/`
 		- [`git`](https://git-scm.com/)
 		- [`gnupg`](https://gnupg.org/)
-- `.config/`
 	- `newsraft/`
 		- [`newsraft`](https://www.freshports.org/www/newsraft/)
-- `.config/`
+	- `qutebrowser/`
+		- [`qutebrowser`](https://qutebrowser.org/)
 	- `vis/`
 		- [`vis`](https://github.com/martanne/vis)
 - `.xinitrc`
