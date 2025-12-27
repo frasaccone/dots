@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ "$#" -ne 1 ]; then
-	echo "Usage: $0 <user>"
+	echo "Usage: $0 user"
 	exit 1
 fi
 
