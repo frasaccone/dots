@@ -1,4 +1,4 @@
-PREFIX = $$HOME
+include config.mk
 
 all: help
 
