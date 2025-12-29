@@ -8,27 +8,27 @@ Requirements
 
 - `.config/`
 	- `aerc/`
-		- [`aerc`](https://aerc-mail.org/)
-		- [`gnupg`](https://gnupg.org/)
-		- [`openssh`](https://www.openssh.org/)
-		- [`rsync`](https://rsync.samba.org/)
+		- [`Aerc`](https://aerc-mail.org/).
+		- [`GnuPG`](https://gnupg.org/).
+		- [`OpenSSH`](https://www.openssh.org/).
+		- [`Rsync`](https://rsync.samba.org/).
 	- `git/`
-		- [`git`](https://git-scm.com/)
-		- [`gnupg`](https://gnupg.org/)
+		- [`Git`](https://git-scm.com/).
+		- [`GnuPG`](https://gnupg.org/).
 	- `newsraft/`
-		- [`newsraft`](https://www.freshports.org/www/newsraft/)
+		- [`Newsraft`](https://www.freshports.org/www/newsraft/).
 	- `qutebrowser/`
-		- [`qutebrowser`](https://qutebrowser.org/)
+		- [`qutebrowser`](https://qutebrowser.org/).
 	- `vis/`
-		- [`vis`](https://github.com/martanne/vis)
+		- [`Vis`](https://github.com/martanne/vis).
 - `.xinitrc`
-	- [`feh`](https://feh.finalrewind.org/)
-	- [`setxkbmap`](https://x.org/wiki/)
-	- [`wpa_supplicant`](http://w1.fi/wpa_supplicant/)
-	- [`xcompmgr`](https://gitlab.freedesktop.org/xorg/app/xcompmgr/)
-	- [`xinput`](https://x.org/wiki/)
-	- [`xset`](https://x.org/wiki/)
-	- [`xsetroot`](https://x.org/wiki/)
+	- [`feh`](https://feh.finalrewind.org/).
+	- [`setxkbmap`](https://x.org/wiki/).
+	- [`wpa_supplicant`](http://w1.fi/wpa_supplicant/).
+	- [`xcompmgr`](https://gitlab.freedesktop.org/xorg/app/xcompmgr/).
+	- [`xinput`](https://x.org/wiki/).
+	- [`xset`](https://x.org/wiki/).
+	- [`xsetroot`](https://x.org/wiki/).
 
 Installation
 ------------
@@ -39,8 +39,8 @@ Installation
 > Targets
 > -------
 >
-> - `install-config`  — Installs the .config directory.
-> - `install-local`   — Installs the .local directory.
-> - `install-profile` — Installs the .profile file.
-> - `install-xinitrc` — Installs the .xinitrc file.
-> - `install`         — Installs all.
+> - `install-config` — Installs the `.config` directory.
+> - `install-local` — Installs the `.local` directory.
+> - `install-profile` — Installs the `.profile` file.
+> - `install-xinitrc` — Installs the `.xinitrc` file.
+> - `install` — Installs all.
