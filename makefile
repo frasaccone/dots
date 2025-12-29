@@ -19,11 +19,13 @@ install-config:
 	mkdir -p $(PREFIX)
 	rm -rf $(PREFIX)/.config
 	cp -rf config $(PREFIX)/.config
+	chmod -R 755 $(PREFIX)/.config
 
 install-local:
 	mkdir -p $(PREFIX)
 	rm -rf $(PREFIX)/.local
 	cp -rf local $(PREFIX)/.local
+	chmod -R 755 $(PREFIX)/.local
 
 install-profile:
 	mkdir -p $(PREFIX)
