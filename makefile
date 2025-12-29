@@ -16,17 +16,21 @@ list:
 install: install-config install-local install-profile install-xinitrc
 
 install-config:
+	mkdir -p $(PREFIX)
 	rm -rf $(PREFIX)/.config
 	cp -rf config $(PREFIX)/.config
 
 install-local:
+	mkdir -p $(PREFIX)
 	rm -rf $(PREFIX)/.local
 	cp -rf local $(PREFIX)/.local
 
 install-profile:
+	mkdir -p $(PREFIX)
 	rm -rf $(PREFIX)/.profile
 	cp -rf profile $(PREFIX)/.profile
 
 install-xinitrc:
+	mkdir -p $(PREFIX)
 	rm -rf $(PREFIX)/.xinitrc
 	cp -rf xinitrc $(PREFIX)/.xinitrc
