@@ -33,4 +33,14 @@ Requirements
 Installation
 ------------
 
-	$ ./install.sh
+	$ make [PREFIX=prefix] target
+	$ make list
+
+> Targets
+> -------
+>
+> - `install-config`  — Installs the .config directory.
+> - `install-local`   — Installs the .local directory.
+> - `install-profile` — Installs the .profile file.
+> - `install-xinitrc` — Installs the .xinitrc file.
+> - `install`         — Installs all.
