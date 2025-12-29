@@ -39,7 +39,7 @@ Installation
 > Targets
 > -------
 >
-> - `install-config` — Installs the `.config` directory.
-> - `install-profile` — Installs the `.profile` file.
-> - `install-xinitrc` — Installs the `.xinitrc` and `.wallpaper.png` files.
-> - `install` — Installs all.
+> - `install-config` — Install the `.config` directory.
+> - `install-profile` — Install the `.profile` file.
+> - `install-xinitrc` — Install the `.xinitrc` and `.wallpaper.png` files.
+> - `install` — Install all.

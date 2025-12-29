@@ -7,10 +7,10 @@ help:
 	@echo '       make list'
 
 list:
-	@echo 'Targets: install-config  — Installs the .config directory.'
-	@echo '         install-profile — Installs the .profile file.'
-	@echo '         install-xinitrc — Installs the .xinitrc and .wallpaper.png files.'
-	@echo '         install         — Installs all.'
+	@echo 'Targets: install-config  — Install the .config directory.'
+	@echo '         install-profile — Install the .profile file.'
+	@echo '         install-xinitrc — Install the .xinitrc and .wallpaper.png files.'
+	@echo '         install         — Install all.'
 
 install: install-config \
          install-profile \
