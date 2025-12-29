@@ -1,5 +1,10 @@
 include config.mk
 
+.PHONY: all help list install \
+        install-config \
+        install-profile \
+        install-xinitrc \
+
 all: help
 
 help:
