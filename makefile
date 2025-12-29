@@ -12,7 +12,9 @@ list:
 	@echo '         install-xinitrc — Installs the .xinitrc and .wallpaper.png files.'
 	@echo '         install         — Installs all.'
 
-install: install-config install-local install-profile install-xinitrc
+install: install-config \
+         install-profile \
+         install-xinitrc
 
 install-config:
 	mkdir -p $(PREFIX)
@@ -23,10 +25,10 @@ install-config:
 install-profile:
 	mkdir -p $(PREFIX)
 	rm -rf $(PREFIX)/.profile
-	cp -rf profile $(PREFIX)/.profile
+	cp -f profile $(PREFIX)/.profile
 
 install-xinitrc:
 	mkdir -p $(PREFIX)
 	rm -rf $(PREFIX)/.xinitrc
-	cp -rf xinitrc $(PREFIX)/.xinitrc
+	cp -f xinitrc $(PREFIX)/.xinitrc
 	cp -f wallpaper.png $(PREFIX)/.wallpaper.png
