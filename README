@@ -40,7 +40,6 @@ Installation
 > -------
 >
 > - `install-config` — Installs the `.config` directory.
-> - `install-local` — Installs the `.local` directory.
 > - `install-profile` — Installs the `.profile` file.
-> - `install-xinitrc` — Installs the `.xinitrc` file.
+> - `install-xinitrc` — Installs the `.xinitrc` and `.wallpaper.png` files.
 > - `install` — Installs all.

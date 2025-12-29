@@ -67,7 +67,7 @@ while true; do
 	sleep 1
 done &
 
-feh --bg-fill ~/.local/share/wallpaper.png
+feh --bg-fill ~/.wallpaper.png
 
 xcompmgr -cfr 12 -l -15 -t -15 -o 1.0 -I 0.03 -O 0.03 -D 5 &
 
