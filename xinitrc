@@ -33,19 +33,19 @@ while true; do
 
 	case "$(cat /sys/class/power_supply/$battery_device/status)" in
 		"Charging")
-			battery_status="[⚡]"
+			battery_status="⚡"
 			;;
 		"Discharging")
-			battery_status="[🔌]"
+			battery_status="🔋"
 			;;
 		"Full")
-			battery_status="[✅]"
+			battery_status="✅"
 			;;
 		"Not charging")
-			battery_status="[⚠️]"
+			battery_status="⚠️"
 			;;
 		*)
-			battery_status="[❓]"
+			battery_status="❓"
 			;;
 	esac
 
@@ -56,7 +56,7 @@ while true; do
 	status=$(echo \
 	         "📡 $ssid" \
 	         " " \
-	         "🔋 $battery $battery_status" \
+	         "$battery_status $battery" \
 	         " " \
 	         "📅 $localdate" \
 	         " " \
