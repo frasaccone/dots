@@ -9,8 +9,8 @@ touchpad_ids=$(xinput list \
                | cut -d '=' -f 2)
 
 for i in $touchpad_ids; do
-	xinput set-prop "$i" "libinput Tapping Enabled" 1
-	xinput set-prop "$i" "libinput Natural Scrolling Enabled" 1
+	xinput set-prop "$i" "libinput Tapping Enabled" 1 || true
+	xinput set-prop "$i" "libinput Natural Scrolling Enabled" 1 || true
 done
 
 while true; do
