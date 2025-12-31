@@ -3,15 +3,15 @@
 xset -b
 setxkbmap -layout us
 
-touchpad_id=$(xinput list \
-              | grep -i touchpad \
-              | grep -o 'id=[0-9]*' \
-              | cut -d = -f 2)
+touchpad_ids=$(xinput list \
+               | grep -i touchpad \
+               | grep -o 'id=[0-9]*' \
+               | cut -d '=' -f 2)
 
-if [ -n $touchpad_id ]; then
-	xinput set-prop $touchpad_id "libinput Tapping Enabled" 1
-	xinput set-prop $touchpad_id "libinput Natural Scrolling Enabled" 1
-fi
+for i in $touchpad_ids; do
+	xinput set-prop $i "libinput Tapping Enabled" 1
+	xinput set-prop $i "libinput Natural Scrolling Enabled" 1
+done
 
 while true; do
 	wireless_interface=$(wpa_cli interface | head -n 1 \
