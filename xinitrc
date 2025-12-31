@@ -3,49 +3,47 @@
 xset -b
 setxkbmap -layout us
 
-touchpad_ids=$(xinput list \
-               | grep -i touchpad \
-               | grep -o 'id=[0-9]*' \
-               | cut -d '=' -f 2)
+touchpads=$(xinput list | grep -i touchpad \
+                        | grep -o 'id=[0-9]*' \
+                        | cut -d '=' -f 2)
 
-for i in $touchpad_ids; do
-	xinput set-prop "$i" "libinput Tapping Enabled" 1 || true
-	xinput set-prop "$i" "libinput Natural Scrolling Enabled" 1 || true
+for t in $touchpads; do
+	xinput set-prop "$t" "libinput Tapping Enabled" 1 || true
+	xinput set-prop "$t" "libinput Natural Scrolling Enabled" 1 || true
 done
 
 while true; do
-	wireless_interface=$(wpa_cli interface | head -n 1 \
-	                                       | cut -d ' ' -f 3 \
-	                                       | tr -d "'")
+	winterface=$(wpa_cli interface | head -n 1 \
+	                               | cut -d ' ' -f 3 \
+	                               | tr -d "'")
 
-	if [ -n "$wireless_interface" ]; then
-		ssid=$(wpa_cli -i "$wireless_interface" status \
-		                                        | grep '^ssid=' \
-		                                        | cut -d '=' -f 2)
+	if [ -n "$winterface" ]; then
+		ssid=$(wpa_cli -i "$winterface" status | grep '^ssid=' \
+		                                       | cut -d '=' -f 2)
 	fi
 
 	if [ -z "$ssid" ]; then
 		ssid="None"
 	fi
 
-	battery_device=$(ls /sys/class/power_supply | grep '^BAT' | head -n 1)
-	battery=$(cat "/sys/class/power_supply/$battery_device/capacity")%
+	batdev=$(ls /sys/class/power_supply | grep '^BAT' | head -n 1)
+	batperc=$(cat "/sys/class/power_supply/$batdev/capacity")
 
-	case "$(cat /sys/class/power_supply/$battery_device/status)" in
+	case "$(cat /sys/class/power_supply/$batdev/status)" in
 		"Charging")
-			battery_status="⚡"
+			baticon="⚡"
 			;;
 		"Discharging")
-			battery_status="🔋"
+			baticon="🔋"
 			;;
 		"Full")
-			battery_status="✅"
+			baticon="✅"
 			;;
 		"Not charging")
-			battery_status="⚠️"
+			baticon="⚠️"
 			;;
 		*)
-			battery_status="❓"
+			baticon="❓"
 			;;
 	esac
 
@@ -56,7 +54,7 @@ while true; do
 	status=$(echo \
 	         "📡 $ssid" \
 	         " " \
-	         "$battery_status $battery" \
+	         "$baticon ${batperc}%" \
 	         " " \
 	         "📅 $localdate" \
 	         " " \
