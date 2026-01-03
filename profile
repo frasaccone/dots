@@ -8,5 +8,6 @@ if [ $(tty) = "/dev/tty1" ]; then
 fi
 
 export EDITOR="vis"
+export XDG_RUNTIME_DIR="$HOME"
 
 eval "$(ssh-agent)" > /dev/null

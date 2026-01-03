@@ -40,6 +40,7 @@ Installation
 > -------
 >
 > - `install-config` — Install the `.config` directory.
+> - `install-local-share-fonts` — Install the `.local/share/fotns` directory.
 > - `install-profile` — Install the `.profile` file.
 > - `install-xinitrc` — Install the `.xinitrc` and `.wallpaper.png` files.
 > - `install` — Install all.
