@@ -7,22 +7,26 @@ touchpads=$(xinput list | grep -i touchpad \
                         | grep -o 'id=[0-9]*' \
                         | cut -d '=' -f 2)
 
-for t in $touchpads; do
+for t in $touchpads
+do
 	xinput set-prop "$t" "libinput Tapping Enabled" 1 || true
 	xinput set-prop "$t" "libinput Natural Scrolling Enabled" 1 || true
 done
 
-while true; do
+while true
+do
 	winterface=$(wpa_cli interface | head -n 1 \
 	                               | cut -d ' ' -f 3 \
 	                               | tr -d "'")
 
-	if [ -n "$winterface" ]; then
+	if [ -n "$winterface" ]
+	then
 		ssid=$(wpa_cli -i "$winterface" status | grep '^ssid=' \
 		                                       | cut -d '=' -f 2)
 	fi
 
-	if [ -z "$ssid" ]; then
+	if [ -z "$ssid" ]
+	then
 		ssid="None"
 	fi
 
