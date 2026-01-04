@@ -10,4 +10,6 @@ fi
 export EDITOR="vis"
 export XDG_RUNTIME_DIR="$HOME"
 
+export GPG_TTY=$(tty)
+
 eval "$(ssh-agent)" > /dev/null
