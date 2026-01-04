@@ -28,7 +28,6 @@ install-config:
 	mkdir -p $(PREFIX)
 	rm -rf $(PREFIX)/.config
 	cp -rf config $(PREFIX)/.config
-	chmod -R 755 $(PREFIX)/.config
 
 install-local-share-fonts:
 	mkdir -p $(PREFIX)/.local/share
