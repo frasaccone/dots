@@ -39,7 +39,11 @@ Installation
 > Targets
 > -------
 >
-> - `install-config` — Install the `.config` directory.
+> - `install-config-aerc` — Install the `.config/aerc` directory.
+> - `install-config-git` — Install the `.config/git` directory.
+> - `install-config-newsraft` — Install the `.config/newsraft` directory.
+> - `install-config-qutebrowser` — Install the `.config/qutebrowser` directory.
+> - `install-config-vis` — Install the `.config/vis` directory.
 > - `install-local-share-fonts` — Install the `.local/share/fotns` directory.
 > - `install-profile` — Install the `.profile` file.
 > - `install-xinitrc` — Install the `.xinitrc` and `.wallpaper.png` files.
